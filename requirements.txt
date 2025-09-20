@@ -1,0 +1,11 @@
+Flask
+numpy
+matplotlib
+scikit-learn
+requests
+pandas
+seaborn
+pycountry
+importnb
+pytest
+gunicorn
