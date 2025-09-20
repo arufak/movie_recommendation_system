@@ -5,8 +5,9 @@ import gzip
 
 app = Flask(__name__)
 
-api_key_weather = 'aef5b02291330e9c41692e83d46e6c73'
-api_key_movie = '013b31dd3339a724725d88524cfb37ba'
+import os
+api_key_weather = os.environ.get('WEATHER_API_KEY', 'aef5b02291330e9c41692e83d46e6c73')
+api_key_movie = os.environ.get('MOVIE_API_KEY', '013b31dd3339a724725d88524cfb37ba')
 
 # Load the compressed CSV file with the correct encoding
 with gzip.open('data/data_weather_mapped.csv.gz', 'rt', encoding='utf-8') as f:
